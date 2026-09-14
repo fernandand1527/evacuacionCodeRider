@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Ruta principal de evacuación",
+        "color": "#ff796c"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-76.6150, 2.4450],
+          [-76.6146, 2.4454],
+          [-76.6141, 2.4458]
+        ]
+      }
+    }
+  ]
+}

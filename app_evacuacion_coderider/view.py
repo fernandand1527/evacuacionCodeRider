@@ -1,0 +1,29 @@
+from django.shortcuts import redirect, render
+
+from .models import Reporte
+from .form import ReporteForm
+
+
+def evacuacion(request):
+    if request.method == "POST":
+        form = ReporteForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("evacuacion")
+    else:
+        form = ReporteForm()
+
+    reportes = Reporte.objects.all()
+    return render(
+        request,
+        "app_evacuacion_coderider/sonora_music.html",
+        {
+            "form": form,
+            "reportes": reportes,
+        },
+    )
+
+
+def sonora_music(request):
+	return render(request, "app_evacuacion_coderider/sonora_music.html")
+

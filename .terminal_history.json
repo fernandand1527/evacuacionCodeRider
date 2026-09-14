@@ -1,0 +1,424 @@
+{
+  "version": 1,
+  "workspacePath": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider",
+  "entries": [
+    {
+      "command": "mkdir -p app_evacuacion_coderider/__pycache__ app_evacuacion_coderider/migrations app_evacuacion_coderider/templates/app_evacuacion_coderider",
+      "timestamp": 1788958790713,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_tqk13.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_tqk13.sh\"; } 2>/dev/null",
+      "timestamp": 1788959113216,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "py -m venv .venv",
+      "timestamp": 1788960271807,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source .venv/Scripts/activate",
+      "timestamp": 1788960314769,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python --version",
+      "timestamp": 1788960325334,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python -m pip install django",
+      "timestamp": 1788960398450,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source v_Evacuacioncoderider/Scripts/activate",
+      "timestamp": 1788960518975,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "epython -m venv v_Evacuacioncoderider",
+      "timestamp": 1788960628656,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python -m venv v_Evacuacioncoderider",
+      "timestamp": 1788960653643,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source v_Evacuacioncoderider/Scripts/activate",
+      "timestamp": 1788960659145,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python -m pip install django",
+      "timestamp": 1788960699071,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "./.venv/Scripts/python.exe manage.py check",
+      "timestamp": 1788968425442,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "./.venv/Scripts/python.exe manage.py runserver",
+      "timestamp": 1788968688700,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_1m656.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_1m656.sh\"; } 2>/dev/null",
+      "timestamp": 1788970842062,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "/usr/bin/env c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider\\\\.venv\\\\Scripts\\\\python.exe c:\\\\Users\\\\juanf\\\\.vscode\\\\extensions\\\\ms-python.debugpy-2026.6.0-win32-x64\\\\bundled\\\\libs\\\\debugpy\\\\launcher 57902 -- \"\"",
+      "timestamp": 1788970843493,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1788970844879
+    },
+    {
+      "command": "./.venv/Scripts/python.exe manage.py runserver",
+      "timestamp": 1788970995759,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider ; /usr/bin/env c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider\\\\.venv\\\\Scripts\\\\python.exe c:\\\\Users\\\\juanf\\\\.vscode\\\\extensions\\\\ms-python.debugpy-2026.6.0-win32-x64\\\\bundled\\\\libs\\\\debugpy\\\\launcher 57558 -- \"\"",
+      "timestamp": 1788970997139,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "app_evacuacion_coderider/static/recursos/audios/yoga.mp3",
+      "timestamp": 1788971040265,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider ; /usr/bin/env c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider\\\\.venv\\\\Scripts\\\\python.exe c:\\\\Users\\\\juanf\\\\.vscode\\\\extensions\\\\ms-python.debugpy-2026.6.0-win32-x64\\\\bundled\\\\libs\\\\debugpy\\\\launcher 61701 -- \"\"",
+      "timestamp": 1788971060973,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider ; /usr/bin/env c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider\\\\.venv\\\\Scripts\\\\python.exe c:\\\\Users\\\\juanf\\\\.vscode\\\\extensions\\\\ms-python.debugpy-2026.6.0-win32-x64\\\\bundled\\\\libs\\\\debugpy\\\\launcher 53645 -- \"\"",
+      "timestamp": 1788971066614,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "./.venv/Scripts/python.exe manage.py runserver",
+      "timestamp": 1788971677551,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider ; /usr/bin/env c:\\\\INICIOPYTHON\\\\Clases\\ PYTHON\\\\Clases\\ RIDER\\\\Evacuacioncoderider\\\\.venv\\\\Scripts\\\\python.exe c:\\\\Users\\\\juanf\\\\.vscode\\\\extensions\\\\ms-python.debugpy-2026.6.0-win32-x64\\\\bundled\\\\libs\\\\debugpy\\\\launcher 50818 -- \"\"",
+      "timestamp": 1788971678780,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "./.venv/Scripts/python.exe manage.py runserver",
+      "timestamp": 1788971915236,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py check",
+      "timestamp": 1788971919684,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "[200~cp \"c:/Users/juanf/Downloads/rata_blanca_mujer_amante.mp3\" \"app_evacuacion_coderider/static/recursos/audios/rata_blanca_mujer_amante.mp3\"~",
+      "timestamp": 1788973018854,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_hn6sm.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_hn6sm.sh\"; } 2>/dev/null",
+      "timestamp": 1789101902243,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_k59onu.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_k59onu.sh\"; } 2>/dev/null",
+      "timestamp": 1789101902446,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789101907571,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py startapp app_transferencia",
+      "timestamp": 1789132503043,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789133273048,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_dysrq.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_dysrq.sh\"; } 2>/dev/null",
+      "timestamp": 1789135242495,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789135243277
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_c1tcue.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_c1tcue.sh\"; } 2>/dev/null",
+      "timestamp": 1789135245475,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789135245975
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_87z7yq.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_87z7yq.sh\"; } 2>/dev/null",
+      "timestamp": 1789135252107,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789135252716
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_fl0umq.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_fl0umq.sh\"; } 2>/dev/null",
+      "timestamp": 1789135258900,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789135259540
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_j1pdf5.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_j1pdf5.sh\"; } 2>/dev/null",
+      "timestamp": 1789135260758,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789135261366
+    },
+    {
+      "command": "& \"C:\\Users\\juanf\\AppData\\Local\\Temp\\wshist_wol4.ps1\"; Remove-Item \"C:\\Users\\juanf\\AppData\\Local\\Temp\\wshist_wol4.ps1\" -ErrorAction SilentlyContinue",
+      "timestamp": 1789135273367,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& \"c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\.venv\\Scripts\\Activate.ps1\")",
+      "timestamp": 1789135274056
+    },
+    {
+      "command": "python manage.py migrate",
+      "timestamp": 1789135315304,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py runserver",
+      "timestamp": 1789135361446,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd \"app transferencia\"",
+      "timestamp": 1789135389525,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd .\\app_transferencia",
+      "timestamp": 1789135428198,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py migrate",
+      "timestamp": 1789135437415,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_transferencia"
+    },
+    {
+      "command": "python manage.py check",
+      "timestamp": 1789135462463,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_transferencia"
+    },
+    {
+      "command": "cd ..\npython manage.py check",
+      "timestamp": 1789135508248,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_transferencia"
+    },
+    {
+      "command": "python manage.py migrate",
+      "timestamp": 1789135545526,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py runserver",
+      "timestamp": 1789139639971,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "pip install django pillow",
+      "timestamp": 1789139670188,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "pip list",
+      "timestamp": 1789139684766,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "pip install django pillow",
+      "timestamp": 1789139720454,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd \"app_evacuacion_coderider\"",
+      "timestamp": 1789139826908,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "pip install django pillow",
+      "timestamp": 1789139875858,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_evacuacion_coderider"
+    },
+    {
+      "command": "python -m pip install --upgrade pip",
+      "timestamp": 1789140073086,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_evacuacion_coderider"
+    },
+    {
+      "command": "python -m pip install pillow --trusted-host pypi.org --trusted-host files.pythonhosted.org",
+      "timestamp": 1789140088733,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_evacuacion_coderider"
+    },
+    {
+      "command": "django-admin startproyect pr_evacuacion_coderider",
+      "timestamp": 1789140479800,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_evacuacion_coderider"
+    },
+    {
+      "command": "cd ..\\..",
+      "timestamp": 1789140524465,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\app_evacuacion_coderider"
+    },
+    {
+      "command": "dir",
+      "timestamp": 1789140533654,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "python manage.py check",
+      "timestamp": 1789140548923,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "cd .\\Evacuacioncoderider",
+      "timestamp": 1789140588700,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "dir",
+      "timestamp": 1789140594730,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py check",
+      "timestamp": 1789140607410,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& \"c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\.venv\\Scripts\\Activate.ps1\")django-admin startproyect pr_evacuacion_coderider",
+      "timestamp": 1789140662568,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py runserver",
+      "timestamp": 1789141216345,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& \"c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\.venv\\Scripts\\Activate.ps1\")django-admin startproyect pr_Evacuacion_coderider",
+      "timestamp": 1789141234295,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "cd ..\ndjango-admin startproject pr_Evacuacion_coderider",
+      "timestamp": 1789141281573,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py check",
+      "timestamp": 1789141957206,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "python manage.py runserver",
+      "timestamp": 1789143640535,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "python manage.py migrate",
+      "timestamp": 1789143793067,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "cd .\\Evacuacioncoderider",
+      "timestamp": 1789143839400,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER"
+    },
+    {
+      "command": "dir",
+      "timestamp": 1789143857812,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py check",
+      "timestamp": 1789143874390,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py migrate",
+      "timestamp": 1789143928971,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "python manage.py runserver",
+      "timestamp": 1789389078666,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_4nwtm1j.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_4nwtm1j.sh\"; } 2>/dev/null",
+      "timestamp": 1789389241995,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "{ source \"C:/Users/juanf/AppData/Local/Temp/wshist_35kfh.sh\" && rm \"C:/Users/juanf/AppData/Local/Temp/wshist_35kfh.sh\"; } 2>/dev/null",
+      "timestamp": 1789390059173,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "source \"/c/INICIOPYTHON/Clases PYTHON/Clases RIDER/Evacuacioncoderider/.venv/Scripts/activate\"",
+      "timestamp": 1789390060390
+    },
+    {
+      "command": "& \"C:\\Users\\juanf\\AppData\\Local\\Temp\\wshist_e3qzi.ps1\"; Remove-Item \"C:\\Users\\juanf\\AppData\\Local\\Temp\\wshist_e3qzi.ps1\" -ErrorAction SilentlyContinue",
+      "timestamp": 1789390064267,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "git init(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& \"c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider\\.venv\\Scripts\\Activate.ps1\")",
+      "timestamp": 1789390067553,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "git init",
+      "timestamp": 1789390070943,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    },
+    {
+      "command": "git add README.md",
+      "timestamp": 1789390087759,
+      "cwd": "c:\\INICIOPYTHON\\Clases PYTHON\\Clases RIDER\\Evacuacioncoderider"
+    }
+  ],
+  "lastUpdated": 1789390087759
+}

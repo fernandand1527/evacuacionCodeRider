@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1"
+     creator="Proyecto Evacuacion"
+     xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Ruta de evacuacion</name>
+    <desc>Recorrido principal hacia el punto de encuentro</desc>
+  </metadata>
+
+  <trk>
+    <name>Ruta principal de evacuacion</name>
+    <trkseg>
+      <trkpt lat="2.4450" lon="-76.6150"></trkpt>
+      <trkpt lat="2.4454" lon="-76.6146"></trkpt>
+      <trkpt lat="2.4458" lon="-76.6141"></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

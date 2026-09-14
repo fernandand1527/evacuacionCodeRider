@@ -1,0 +1,4 @@
+id,ubicacion,tipo,estado
+1,Entrada principal,ABC,Disponible
+2,Pasillo central,CO2,Disponible
+3,Cafeteria,ABC,Requiere revision

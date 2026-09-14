@@ -1,0 +1,72 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evacuación Coderider</title>
+
+    <link rel="icon" href="{% static 'recursos/imagenes/sistemas/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'recursos/pwa/manifest.json' %}">
+    <link rel="stylesheet" href="{% static 'recursos/estilos/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'recursos/libs/leaflet/leaflet.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Coderider aplicación</h1>
+    </header>
+
+    <main>
+        <section class="tarjeta">
+            <h2>Imágenes</h2>
+            <img
+                src="{% static 'recursos/imagenes/fotos/rock_en_español.jpg' %}"
+                alt="Rock en español"
+                width="250"
+            >
+            <img
+                src="{% static 'recursos/imagenes/iconos/salida.svg' %}"
+                alt="Icono de salida"
+                width="60"
+            >
+        </section>
+
+        <section class="tarjeta">
+            <h2>Audios</h2>
+            <audio controls>
+                <source src="{% static 'recursos/audios/flaca_andrescalamaro.mp3' %}" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+            <audio controls>
+                <source src="{% static 'recursos/audios/mago_de_oz_fiesta_pagana.mp3' %}" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Registrar reporte</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Guardar reporte</button>
+            </form>
+        </section>
+
+        <section class="tarjeta">
+            <h2>📋 Reportes recibidos coderider</h2>
+            {% for r in reportes %}
+            <div class="reporte">
+                <img src="{{ r.foto.url }}" width="150" />
+                <p><strong>{{ r.nombre }}:</strong> {{ r.descripcion }}</p>
+                <p>📅 {{ r.fecha|date:"d/m/Y H:i" }}</p>
+                {% if r.documento %}
+                <a href="{{ r.documento.url }}"> Ver documento</a>
+                {% endif %}
+            </div>
+            {% empty %}
+            <p>Aún no hay reportes.</p>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>

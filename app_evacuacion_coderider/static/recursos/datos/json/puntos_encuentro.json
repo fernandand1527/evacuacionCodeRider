@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Punto de encuentro principal",
+    "latitud": 2.4458,
+    "longitud": -76.6141,
+    "descripcion": "Zona abierta junto a la entrada principal"
+  },
+  {
+    "nombre": "Punto de encuentro alterno",
+    "latitud": 2.4462,
+    "longitud": -76.6136,
+    "descripcion": "Cancha exterior"
+  }
+]
