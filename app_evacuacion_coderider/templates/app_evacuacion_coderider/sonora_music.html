@@ -2,61 +2,179 @@
 <!doctype html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sonora | Tu biblioteca musical</title>
-	<link rel="icon" href="{% static 'recursos/imagenes/sistemas/favicon.ico' %}" type="image/x-icon">
-	<link rel="stylesheet" href="{% static 'recursos/estilos/estilo.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeRider FM</title>
+    <link rel="icon" href="{% static 'recursos/imagenes/sistemas/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'recursos/estilos/estilo.css' %}">
 </head>
-<body>
-	<div class="music-shell">
-		<aside class="sidebar">
-			<a class="brand" href="#inicio"><span class="brand-mark">S</span> sonora</a>
-			<nav aria-label="Navegación principal">
-				<a class="nav-link active" href="#inicio"><span>⌂</span> Inicio</a>
-				<a class="nav-link" href="#explorar"><span>◌</span> Explorar</a>
-				<a class="nav-link" href="#favoritos"><span>♡</span> Favoritos</a>
-			</nav>
-			<div class="sidebar-note"><span class="live-dot"></span> Escuchando contigo</div>
-		</aside>
+<body class="music-page">
+    <div class="radio-shell">
+        <aside class="radio-sidebar">
+            <div class="radio-brand-wrap">
+                <a class="radio-brand" href="#inicio"><span class="brand-mark">C</span> CodeRider FM</a>
+            </div>
 
-		<main class="music-main" id="inicio">
-			<header class="topbar">
-				<div class="search-box"><span>⌕</span><input type="search" placeholder="Buscar canciones, artistas o álbumes" aria-label="Buscar música"></div>
-				<button class="profile-button" type="button">Mi espacio <span>⌄</span></button>
-			</header>
+            <nav class="radio-nav" aria-label="Navegación principal">
+                <a class="radio-link active" href="#inicio"><span>⌂</span> Inicio</a>
+                <a class="radio-link" href="#emisiones"><span>◉</span> Emisiones</a>
+                <a class="radio-link" href="#favoritos"><span>♥</span> Favoritos</a>
+            </nav>
 
-			<section class="welcome-section">
-				<div>
-					<p class="kicker">Tu frecuencia del día</p>
-					<h1>Haz espacio<br><em>para la música.</em></h1>
-					<p class="welcome-copy">Una selección suave para acompañar tus momentos, con sonidos que se sienten como Sonora.</p>
-				</div>
-				<div class="disc-art hero-photo" aria-hidden="true" style="background-image: linear-gradient(rgba(24, 36, 61, 0.18), rgba(24, 36, 61, 0.18)), url('{% static 'recursos/imagenes/fotos/rock_en_español.jpg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat;"><span></span></div>
-			</section>
+            <div class="sidebar-widget">
+                <span class="live-dot"></span>
+                <span>Escuchando contigo</span>
+            </div>
+        </aside>
 
-			<section class="section-block" id="explorar" aria-labelledby="popular-title">
-				<div class="section-heading"><div><p class="kicker">Para empezar</p><h2 id="popular-title">Escuchado recientemente</h2></div><a href="#biblioteca">Ver todo</a></div>
-				<div class="track-grid">
-					<button class="track-card" type="button" data-track="0" data-title="Flaca" data-artist="Andrés Calamaro" data-src="{% static 'recursos/audios/flaca_andrescalamaro.mp3' %}"><span class="cover cover-rock" style="background-image: url('{% static 'recursos/imagenes/fotos/rock_en_español.jpg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat; color: transparent;">.</span><strong>Flaca</strong><small>Andrés Calamaro · Pop</small></button>
-					<button class="track-card" type="button" data-track="1" data-title="Mujer amante" data-artist="Rata Blanca" data-src="{% static 'recursos/audios/rata_blanca_mujer_amante.mp3' %}"><span class="cover cover-violet">◆</span><strong>Mujer amante</strong><small>Rata Blanca · Rock</small></button>
-					<button class="track-card" type="button" data-track="2" data-title="Fiesta pagana" data-artist="Mägo de Oz" data-src="{% static 'recursos/audios/mago_de_oz_fiesta_pagana.mp3' %}"><span class="cover cover-teal">♫</span><strong>Fiesta pagana</strong><small>Mägo de Oz · Rock</small></button>
-				</div>
-			</section>
+        <main class="radio-main" id="inicio">
+            <header class="radio-topbar">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="search" placeholder="Buscar canciones, artistas o programas" aria-label="Buscar música">
+                </div>
+                <button class="profile-button" type="button">Mi espacio <span>⌄</span></button>
+            </header>
 
-			<section class="section-block" id="biblioteca" aria-labelledby="mix-title">
-				<div class="section-heading"><div><p class="kicker">Colecciones para ti</p><h2 id="mix-title">Elige tu ambiente</h2></div></div>
-				<div class="mood-grid"><a href="#player" class="mood mood-night"><span>01</span><strong>Noche lenta</strong><small>Calma · 12 canciones</small></a><a href="#player" class="mood mood-sun"><span>02</span><strong>Buen comienzo</strong><small>Optimismo · 18 canciones</small></a><a href="#player" class="mood mood-focus"><span>03</span><strong>Modo enfoque</strong><small>Instrumental · 24 canciones</small></a></div>
-			</section>
-		</main>
+            <section class="hero-radio">
+                <div class="hero-copy">
+                    <p class="kicker">Tu frecuencia del día</p>
+                    <h1>Haz espacio<br><em>para la voz del barrio.</em></h1>
+                    <p class="welcome-copy">Una mezcla de energía, comunidad y alerta clara para acompañar cada momento del día.</p>
+                </div>
 
-		<footer class="player-bar" id="player">
-			<div class="now-playing"><span class="mini-cover" id="mini-cover">◒</span><div><strong id="now-title">Selecciona una canción</strong><small id="now-artist">Tu biblioteca Sonora</small></div></div>
-			<div class="player-controls"><button id="play-button" class="play-button" type="button" aria-label="Reproducir">▶</button><div class="progress-line"><span></span></div></div>
-			<audio id="music-player" preload="metadata"></audio>
-			<div class="volume">♬ <span>100%</span></div>
-		</footer>
-	</div>
-	<script src="{% static 'recursos/scripts/mapa.js' %}"></script>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-orb"></div>
+                    <div class="hero-labels">
+                        <span>LIVE</span>
+                        <strong>CodeRider FM</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats-grid" id="emisiones">
+                <article class="stat-card primary">
+                    <span>En directo</span>
+                    <strong>24/7</strong>
+                    <small>Transmisión activa</small>
+                </article>
+                <article class="stat-card">
+                    <span>Emisión</span>
+                    <strong>Audio</strong>
+                    <small>Orientación y alerta</small>
+                </article>
+                <article class="stat-card">
+                    <span>Estado</span>
+                    <strong>Online</strong>
+                    <small>Listo para escuchar</small>
+                </article>
+            </section>
+
+            <section class="section-block" id="explorar" aria-labelledby="popular-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="kicker">Para empezar</p>
+                        <h2 id="popular-title">Escuchado recientemente</h2>
+                    </div>
+                    <a href="#biblioteca">Ver todo</a>
+                </div>
+
+                <div class="track-grid">
+                    <button class="track-card" type="button" data-title="Flaca" data-artist="Andrés Calamaro" data-src="{% static 'recursos/audios/flaca_andrescalamaro.mp3' %}">
+                        <span class="cover cover-rock">♪</span>
+                        <strong>Flaca</strong>
+                        <small>Andrés Calamaro · Pop</small>
+                    </button>
+
+                    <button class="track-card" type="button" data-title="Mujer amante" data-artist="Rata Blanca" data-src="{% static 'recursos/audios/rata_blanca_mujer_amante.mp3' %}">
+                        <span class="cover cover-violet">◆</span>
+                        <strong>Mujer amante</strong>
+                        <small>Rata Blanca · Rock</small>
+                    </button>
+
+                    <button class="track-card" type="button" data-title="Fiesta pagana" data-artist="Mägo de Oz" data-src="{% static 'recursos/audios/mago_de_oz_fiesta_pagana.mp3' %}">
+                        <span class="cover cover-teal">♫</span>
+                        <strong>Fiesta pagana</strong>
+                        <small>Mägo de Oz · Rock</small>
+                    </button>
+                </div>
+            </section>
+
+            <section class="section-block" id="biblioteca" aria-labelledby="mix-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="kicker">Colecciones para ti</p>
+                        <h2 id="mix-title">Elige tu ambiente</h2>
+                    </div>
+                </div>
+
+                <div class="mood-grid">
+                    <a href="#player" class="mood mood-night"><span>01</span><strong>Noche lenta</strong><small>Calma · 12 pistas</small></a>
+                    <a href="#player" class="mood mood-sun"><span>02</span><strong>Buen comienzo</strong><small>Optimismo · 18 pistas</small></a>
+                    <a href="#player" class="mood mood-focus"><span>03</span><strong>Modo enfoque</strong><small>Instrumental · 24 pistas</small></a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="player-bar" id="player">
+            <div class="now-playing">
+                <span class="mini-cover" id="mini-cover">◉</span>
+                <div>
+                    <strong id="now-title">Selecciona una canción</strong>
+                    <small id="now-artist">CodeRider FM</small>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <button id="play-button" class="play-button" type="button" aria-label="Reproducir">▶</button>
+                <div class="progress-line"><span></span></div>
+            </div>
+
+            <audio id="music-player" preload="metadata"></audio>
+            <div class="volume"><span>♫</span> <span>100%</span></div>
+        </footer>
+    </div>
+
+    <script>
+        const player = document.getElementById('music-player');
+        const playButton = document.getElementById('play-button');
+        const nowTitle = document.getElementById('now-title');
+        const nowArtist = document.getElementById('now-artist');
+        const cards = document.querySelectorAll('.track-card');
+
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const title = card.dataset.title;
+                const artist = card.dataset.artist;
+                const src = card.dataset.src;
+
+                nowTitle.textContent = title;
+                nowArtist.textContent = artist;
+                player.src = src;
+                player.play();
+                playButton.textContent = '❚❚';
+                cards.forEach(item => item.classList.remove('active'));
+                card.classList.add('active');
+            });
+        });
+
+        playButton.addEventListener('click', () => {
+            if (player.paused) {
+                player.play();
+                playButton.textContent = '❚❚';
+            } else {
+                player.pause();
+                playButton.textContent = '▶';
+            }
+        });
+
+        player.addEventListener('play', () => {
+            playButton.textContent = '❚❚';
+        });
+
+        player.addEventListener('pause', () => {
+            playButton.textContent = '▶';
+        });
+    </script>
 </body>
 </html>

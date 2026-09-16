@@ -8,39 +8,156 @@
 
     <link rel="icon" href="{% static 'recursos/imagenes/sistemas/favicon.ico' %}">
     <link rel="manifest" href="{% static 'recursos/pwa/manifest.json' %}">
+
+    <!-- 1. Primero carga Leaflet de la CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- 2. Después carga tus estilos personalizados para que ganen prioridad -->
     <link rel="stylesheet" href="{% static 'recursos/estilos/estilo.css' %}">
-    <link rel="stylesheet" href="{% static 'recursos/libs/leaflet/leaflet.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Coderider aplicación</h1>
+    <nav class="navbar">
+        <div class="nav-contenedor">
+            <a href="{% url 'evacuacion' %}" class="nav-logo">CodeRider</a>
+            <ul class="nav-menu">
+                <li>
+                    <a href="{% url 'evacuacion' %}" class="active">Generalidades CodeRider</a>
+                </li>
+                <li>
+                    <a href="{% url 'sonora_music' %}" class="nav-enlace">Panel CodeRider</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-header">
+        <div class="hero-content">
+            <div>
+                <p class="eyebrow">Sistema de evacuación</p>
+                <h1>CodeRider</h1>
+            </div>
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                Estado operativo
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="tarjeta">
-            <h2>Imágenes</h2>
-            <img
-                src="{% static 'recursos/imagenes/fotos/rock_en_español.jpg' %}"
-                alt="Rock en español"
-                width="250"
-            >
-            <img
-                src="{% static 'recursos/imagenes/iconos/salida.svg' %}"
-                alt="Icono de salida"
-                width="60"
-            >
+       <section class="tarjeta dashboard-panel">
+          <div class="panel-header">
+            <h2>🗺️ Mapa de evacuación</h2>
+            <span class="panel-tag">Monitoreo activo</span>
+          </div>
+          <div class="botonera">
+            <button id="btn-ruta" class="btn-mapa btn-verde">
+              Mostrar ruta de evacuación
+            </button>
+            <button id="btn-todo-mapa" class="btn-mapa btn-azul">
+              Ver ruta completa
+            </button>
+          </div>
+          <div class="botonera">
+            <button class="btn-mapa btn-azul ubicacion-btn" data-lat="2.4458" data-lng="-76.6141" data-label="Punto principal" data-descripcion="Zona segura para reunión y control de evacuación.">
+              Punto principal
+            </button>
+            <button class="btn-mapa btn-rojo ubicacion-btn" data-lat="2.4462" data-lng="-76.6136" data-label="Punto alterno" data-descripcion="Zona alternativa en caso de bloqueo del punto principal.">
+              Punto alterno
+            </button>
+            <button class="btn-mapa btn-verde ubicacion-btn" data-lat="2.4453" data-lng="-76.6147" data-label="Ruta de evacuación" data-descripcion="Trayectoria segura recomendada hacia el punto de encuentro.">
+              Ruta de evacuación
+            </button>
+          </div>
+
+          <div class="mapa-sismos-box">
+            <div class="mapa-sismos-header">
+              <h3>Sismos recientes</h3>
+              <button id="btn-sismos" class="btn-mapa btn-rojo mini-btn">
+                Buscar sismos
+              </button>
+            </div>
+            <div class="filtros-sismos">
+              <label>
+                Lugar
+                <input type="text" id="buscar-sismos" placeholder="Colombia, Popayan..." aria-label="Buscar sismos por lugar" />
+              </label>
+              <label>
+                Magnitud minima
+                <input type="number" id="magnitud-minima" min="0" max="10" step="0.1" placeholder="Todas" aria-label="Magnitud minima" />
+              </label>
+              <label>
+                Desde
+                <input type="date" id="fecha-sismos" aria-label="Fecha inicial de sismos" />
+              </label>
+            </div>
+            <div class="leyenda-sismos">
+              <span><i class="dot leve"></i> Baja</span>
+              <span><i class="dot media"></i> Media</span>
+              <span><i class="dot fuerte"></i> Fuerte</span>
+            </div>
+            <p id="estado-sismos" class="estado-sismos" aria-live="polite"></p>
+            <div id="lista-sismos" class="lista-puntos lista-sismos-mini"></div>
+          </div>
+
+          <div id="mapa"></div>
         </section>
 
         <section class="tarjeta">
-            <h2>Audios</h2>
-            <audio controls>
-                <source src="{% static 'recursos/audios/flaca_andrescalamaro.mp3' %}" type="audio/mpeg">
-                Tu navegador no soporta audio.
-            </audio>
-            <audio controls>
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Guía visual</p>
+              <h2>Señales de evacuación</h2>
+            </div>
+            <span class="section-counter">2 señales clave</span>
+          </div>
+            <div class="visual-grid">
+                <div class="visual-card visual-card-main">
+                    <div class="visual-badge">
+                        <img
+                            src="{% static 'recursos/imagenes/iconos/salida.svg' %}"
+                            alt="Icono de salida"
+                            width="72"
+                        >
+                    </div>
+                    <div>
+                      <span class="signal-label">SEÑAL 01 · EVACUACIÓN</span>
+                      <strong>Salida segura</strong>
+                      <p>Indica el camino habilitado para abandonar el lugar sin correr ni devolverse.</p>
+                      <b>Acción: seguir la ruta verde.</b>
+                    </div>
+                </div>
+                <div class="visual-card visual-card-accent">
+                    <span class="chip">ALERTA ACTIVA</span>
+                    <strong>Atención y respuesta</strong>
+                    <p>Conservar la calma, escuchar las instrucciones y dirigirse al punto de encuentro.</p>
+                    <b>Acción: atender las indicaciones.</b>
+                </div>
+            </div>
+        </section>
+
+        <section class="tarjeta">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Comunicación</p>
+              <h2>Audio de orientación</h2>
+            </div>
+            <span id="audio-estado" class="section-counter">Preparado</span>
+          </div>
+          <p class="section-description">Mensaje de apoyo para orientar la evacuación. El navegador puede solicitar una interacción antes de reproducirlo.</p>
+          <audio id="audio-alerta" class="audio-principal" controls autoplay preload="auto">
                 <source src="{% static 'recursos/audios/mago_de_oz_fiesta_pagana.mp3' %}" type="audio/mpeg">
                 Tu navegador no soporta audio.
             </audio>
+          <button id="btn-activar-audio" class="btn-mapa btn-azul audio-activar" type="button">
+            Activar audio de orientación
+          </button>
+          <div class="audio-secundario">
+            <span>Audio adicional</span>
+            <audio controls preload="metadata">
+              <source src="{% static 'recursos/audios/flaca_andrescalamaro.mp3' %}" type="audio/mpeg">
+              Tu navegador no soporta audio.
+            </audio>
+          </div>
         </section>
 
         <section class="tarjeta">
@@ -52,21 +169,162 @@
             </form>
         </section>
 
-        <section class="tarjeta">
-            <h2>📋 Reportes recibidos coderider</h2>
-            {% for r in reportes %}
-            <div class="reporte">
-                <img src="{{ r.foto.url }}" width="150" />
-                <p><strong>{{ r.nombre }}:</strong> {{ r.descripcion }}</p>
-                <p>📅 {{ r.fecha|date:"d/m/Y H:i" }}</p>
-                {% if r.documento %}
-                <a href="{{ r.documento.url }}"> Ver documento</a>
-                {% endif %}
+        <section class="tarjeta registro-operativo">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Registro operativo</p>
+              <h2>Reportes recibidos</h2>
             </div>
+            <div class="header-estado">
+              <span class="status-badge">En línea</span>
+              <span class="section-counter">{{ reportes|length }} registrados</span>
+            </div>
+          </div>
+
+          <div class="report-summary">
+            <div class="summary-card summary-main">
+              <span>Total</span>
+              <strong>{{ reportes|length }}</strong>
+            </div>
+            <div class="summary-card">
+              <span>Último</span>
+              <strong>{% if reportes %}{{ reportes.0.fecha|date:"d/m" }}{% else %}--{% endif %}</strong>
+            </div>
+            <div class="summary-card">
+              <span>Estado</span>
+              <strong>{% if reportes %}Activo{% else %}Sin alertas{% endif %}</strong>
+            </div>
+          </div>
+
+            {% for r in reportes %}
+          <article class="reporte">
+            <div class="reporte-cabecera">
+              <span class="reporte-id">REPORTE #{{ forloop.counter }}</span>
+              <time datetime="{{ r.fecha|date:'c' }}">{{ r.fecha|date:"d/m/Y H:i" }}</time>
+            </div>
+            <div class="reporte-cuerpo">
+              {% if r.foto %}
+              <img src="{{ r.foto.url }}" width="150" alt="Imagen del reporte de {{ r.nombre }}" />
+              {% endif %}
+              <div class="reporte-informacion">
+                <div class="reporte-topline">
+                  <h3>{{ r.nombre }}</h3>
+                  <span class="reporte-chip">Seguimiento</span>
+                </div>
+                <p>{{ r.descripcion }}</p>
+                {% if r.documento %}
+                <a class="reporte-enlace" href="{{ r.documento.url }}">Abrir documento adjunto</a>
+                {% endif %}
+              </div>
+            </div>
+          </article>
             {% empty %}
-            <p>Aún no hay reportes.</p>
+          <div class="reporte-vacio">
+            <div class="reporte-vacio-icon">!</div>
+            <div>
+              <strong>Aún no hay reportes registrados</strong>
+              <p>Los avisos enviados aparecerán aquí para su seguimiento y control operativo.</p>
+            </div>
+          </div>
             {% endfor %}
         </section>
+
+        <section class="tarjeta">
+            <h2>🗂️ Subir archivos coderider</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %} {{ form.as_p }}
+                <button type="submit">Enviar reporte</button>
+            </form>
+        </section>
     </main>
+
+    <script>
+        const CSRF_TOKEN = "{{ csrf_token }}";
+        const URL_CSV = "{% static 'recursos/datos/tablas/extintores.csv' %}";
+        const URL_GEO = "{% static 'recursos/datos/geo/ruta.geojson' %}";
+        const URL_GPX = "{% static 'recursos/datos/gps/ruta_evacuacion.gpx' %}";
+        const URL_JSON = "{% static 'recursos/datos/json/puntos_encuentro.json' %}";
+        const URL_API_SISMOS = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson";
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const audio = document.getElementById("audio-alerta");
+          const estado = document.getElementById("audio-estado");
+          const activarAudio = document.getElementById("btn-activar-audio");
+
+          if (!audio || !estado) return;
+
+          audio.play().then(() => {
+            estado.textContent = "Reproduciendo";
+            if (activarAudio) activarAudio.hidden = true;
+          }).catch(() => {
+            estado.textContent = "Pulsa reproducir";
+          });
+
+          audio.addEventListener("play", () => {
+            estado.textContent = "Reproduciendo";
+            if (activarAudio) activarAudio.hidden = true;
+          });
+
+          activarAudio?.addEventListener("click", () => {
+            audio.muted = false;
+            audio.play().then(() => {
+              estado.textContent = "Reproduciendo";
+              activarAudio.hidden = true;
+            });
+          });
+        });
+    <!-- Variables de configuración -->
+    <script>
+        const CSRF_TOKEN = "{{ csrf_token }}";
+        const URL_CSV = "{% static 'recursos/datos/tablas/extintores.csv' %}";
+        const URL_GEO = "{% static 'recursos/datos/geo/ruta.geojson' %}";
+        const URL_GPX = "{% static 'recursos/datos/gps/ruta_evacuacion.gpx' %}";
+        const URL_JSON = "{% static 'recursos/datos/json/puntos_encuentro.json' %}";
+        const URL_API_SISMOS = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson";
+    </script>
+
+    <!-- Script para el manejo de audio -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const audio = document.getElementById("audio-alerta");
+          const estado = document.getElementById("audio-estado");
+          const activarAudio = document.getElementById("btn-activar-audio");
+
+          if (!audio || !estado) return;
+
+          audio.play().then(() => {
+            estado.textContent = "Reproduciendo";
+            if (activarAudio) activarAudio.hidden = true;
+          }).catch(() => {
+            estado.textContent = "Pulsa reproducir";
+          });
+
+          audio.addEventListener("play", () => {
+            estado.textContent = "Reproduciendo";
+            if (activarAudio) activarAudio.hidden = true;
+          });
+
+          activarAudio?.addEventListener("click", () => {
+            audio.muted = false;
+            audio.play().then(() => {
+              estado.textContent = "Reproduciendo";
+              activarAudio.hidden = true;
+            });
+          });
+        });
+    </script>
+
+    <!-- 1. ÚNICA llamada a la librería principal de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- (Opcional si usas GPX) Añade esto solo si cargas archivos .gpx en tu mapa -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
+    <!-- 2. Tus scripts personalizados -->
+    <script src="{% static 'recursos/scripts/puntos_encuentro.js' %}"></script>
+    <script src="{% static 'recursos/scripts/mapa.js' %}"></script>
+    <script src="{% static 'recursos/scripts/sismos_api.js' %}"></script>
+    <script src="{% static 'recursos/scripts/tabla_csv.js' %}"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 
+from .form import ReporteForm
 from .models import Reporte
-from .forms import ReporteForm
 
 
 def evacuacion(request):
@@ -16,7 +16,7 @@ def evacuacion(request):
     reportes = Reporte.objects.all()
     return render(
         request,
-        "app_evacuacion_coderider/evacuacion.html",
+        "evacuacion.html",
         {
             "form": form,
             "reportes": reportes,
